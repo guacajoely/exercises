@@ -1,0 +1,15 @@
+C:\Users\Joel\workspace\csharp\exercises\Classes\bin\Debug\net7.0\Classes.exe
+C:\Users\Joel\workspace\csharp\exercises\Classes\bin\Debug\net7.0\Classes.deps.json
+C:\Users\Joel\workspace\csharp\exercises\Classes\bin\Debug\net7.0\Classes.runtimeconfig.json
+C:\Users\Joel\workspace\csharp\exercises\Classes\bin\Debug\net7.0\Classes.dll
+C:\Users\Joel\workspace\csharp\exercises\Classes\bin\Debug\net7.0\Classes.pdb
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\Classes.csproj.AssemblyReference.cache
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\Classes.AssemblyInfoInputs.cache
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\Classes.AssemblyInfo.cs
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\Classes.csproj.CoreCompileInputs.cache
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\Classes.dll
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\refint\Classes.dll
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\Classes.pdb
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\Classes.genruntimeconfig.cache
+C:\Users\Joel\workspace\csharp\exercises\Classes\obj\Debug\net7.0\ref\Classes.dll
