@@ -132,7 +132,7 @@ public class Program
         //now dealing with bankGroup list
             select new BankEntry {
                 BankName = bankGroup.Key, 
-                MillionaireCount = bankGroup.Count(custObj => custObj.Balance > 1000000)
+                MillionaireCount = bankGroup.Count(custObj => custObj.Balance > 999999)
             }
             
         ).OrderByDescending(bank => bank.MillionaireCount).ToList();
@@ -157,22 +157,25 @@ public class Program
             Peg Vale at Bank of America
         */
 
-        List<BankEntry> detailedMillionaireReport = (from customer in customers
+        List<MillionaireEntry> detailedMillionaireReport = (from customer in customers
 
-        //dealing with customers list
-            group customer by customer.Bank into bankGroup
-
-        //now dealing with bankGroup list
+            //filter out non-millionaires
+            where customer.Balance > 999999
+        
+            // Create a new MillionaireEntry Object
+            // Grab matching bank object from banks List. This returns Bank object, NOT a string, so need to specify .Name when using
+            // Take customer.Name and Split it at the blankspace. This creates a string array! NOT a string, so need to specify index when sorting below
             select new MillionaireEntry {
-                CustomerName = bankGroup.Key, 
-                BankName = bankGroup.Count(custObj => custObj.Balance > 1000000)
+                Name = customer.Name, 
+                Bank = banks.First(bank => bank.Symbol == customer.Bank),
+                SplitName = customer.Name.Split(' ')
             }
-            
-        ).OrderByDescending(bank => bank.MillionaireCount).ToList();
 
-        foreach (var item in millionaireReport)
+        ).OrderBy(customer => customer.SplitName[1]).ToList();
+
+        foreach (var millionaire in detailedMillionaireReport)
         {
-            Console.WriteLine($"{item.CustomerName} at {item.BankName}");
+            Console.WriteLine($"{millionaire.Name} at {millionaire.Bank.Name}");
         }
 
 
@@ -213,10 +216,12 @@ public class Program
 
     
     // Define a separate DETAILED bank entry object
-    public class DetailedBankEntry
+    public class MillionaireEntry
     {
-        public string? Symbol { get; set; }
         public string? Name { get; set; }
+        public Bank Bank { get; set; }
+
+        public string[]? SplitName { get; set; }
     }
     
 
